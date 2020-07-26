@@ -1,0 +1,3 @@
+[submodule "themes/butler"]
+	path = themes/butler
+	url = git@github.com:jfmoy/butler.git

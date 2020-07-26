@@ -1,5 +1,8 @@
 # The URL the site will be built for
-base_url = "https://blog.moystard.com"
+base_url = "https://moystard.com"
+
+# Theme
+theme = 'butler'
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -9,7 +12,29 @@ compile_sass = true
 highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
+
+title = "Jean-Francois 'Jeff' Moy"
+
+description = "The personal blog of Jean-Francois 'Jeff' Moy, Software Engineer at heart. CTO @ Ksubaka in London, United Kingdom"
+
+generate_feed = true
+
+taxonomies = []
 
 [extra]
-# Put all your custom variables here
+
+keywords = "software, engineer, cto, technology, docker, typescript, web, android, computer, java, python, moy, jean-francois, jeff, aws, devops, blog, french, london, uk, united kingdom, france"
+
+
+[extra.author]
+name = "Jean-Francois 'Jeff' Moy"
+
+email.id = "jf@moy.me.uk"
+
+twitter.username = "jf_moy"
+twitter.link = "https://twitter.com/jf_moy"
+
+subtitle = "If you can't explain it simply, you don't understand it well enough."
+
+copyright = "Copyright Jean-Francois Moy - 2020"
