@@ -10,10 +10,10 @@ My name is Jean-François Moy. I am a French Software Engineer living in London,
 Want to know a bit more about me? Feel free to reach out to me on any platform below.
 
 - [LinkedIn](https://www.linkedin.com/in/jeanfrancoismoy)
-- [Twitter](https://twitter.com/jf_moy)
+- [Twitter](https://twitter.com/moystard)
 - [Lobsters](https://lobste.rs/u/moystard)
 - [Hacker News](https://news.ycombinator.com/user?id=moystard)
 
 You may find some of my profiles to be a bit empty. I experimented last year with deleting all my social accounts.
 
-You can also download my [resume](jf_moy-resume.pdf).
+You can also check out my [resume](/resume).
