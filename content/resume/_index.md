@@ -15,9 +15,20 @@ I believe in sharing my knowledge and promoting these values through technical l
 
 ## Experience
 
-### Chief Technology Officer - Ksubaka - London, United Kingdom
+### CTO (Chief Technology Officer) - Ksubaka - London, United Kingdom
 
 *January 2016 - Present*
+
+**Keywords: Leadership, Team Growth, Mentorship, Hiring, Android, AOSP, Springboot, React, Amazon AWS, Splunk, Big Data, Microservices, Kotlin, Java, Typescript, Javascript, Python**
+
+#### Main Achievements:
+
+- Assemble, manage and mentor a team of 12 talented Backend, Web, Mobile, QA and DevOps engineers to support the growth of the business, thanks to an ambitious and high quality pipeline for candidates.
+- Lead the design and contributed to the implementation of a microservices backend capable of operating dozen of thousands of autonomous devices and generating billions of engagements from shoppers worldwide.
+- Lead the design and the implementation of Ksubaka OS, an Android 5+ AOSP flavour with a focus on resilience, and reliability.
+- Lead the design and the development of powerful and innovative React web applications
+- Implementation of the Ksubaka Android & Web SDKs, allowing third parties to quickly deply their applications on the Ksubaka platform.
+
 
 Focus on delivering the best and most robust technical platform for millions of shoppers to enjoy. My priority is on supporting the growth of the business. I lead a team of talented Software, QA and DevOps Engineers committed to providing excellence to our customers.
 
@@ -45,13 +56,26 @@ I also led the recruitment and interviewing of candidates for our software devel
 
 *September 2014 - December 2014*
 
+**Keywords: Ubuntu, Web Platform, W3C, Javascript, Qt, C++**
+
+#### Main Achievements:
+- Improve the Web platform support of the Ubuntu operating systems family by implementing popular APIs in the in-house browser.
+- Advocate Ubuntu as a Web platform thanks to public talks, demo projects and presentations.
+
 Software Engineer in the Ubuntu HTML5 Team, working across the Desktop & Mobile Ubuntu platforms. 
 
 The objective was to build a compelling web platform on the Ubuntu operating systems family to power the growing ecosystem of desktop and mobile web applications. My work involved the development and improvement of the web application container and existing web applications, as well as improving Cordova support for Ubuntu, and developing two HTML5 web applications prototypes.
 
-### Software Engineer - Orange Labs UK - London, United Kingdom
+### Senior Software Engineer - Orange Labs UK - London, United Kingdom
 
 *October 2010 - August 2014*
+
+**Keywords: Android, HTML5, Javascript, AngularJS, Backbone, W3C, Qt, C++**
+
+#### Main Achievements:
+- Technical Leadership of a team of 4 - 6 Software Engineers building the Single Page Application of an OTT Messaging application (Libon)
+- Technical Leadership of a team of 2-4 Software Engineers building a low-level  Visual Voicemail stack on Android (OMTP)
+- Orange representative at W3C
 
 Technical leader & lead developer of the Libon HTML5 client, a powerful web application allowing Libon users to chat with anyone, listen and manage their voicemails, and manage their account. The application features a responsive design, giving a great experience whether you run it on your mobile, tablet or desktop. Available at https://web.libon.com.
 
@@ -70,6 +94,8 @@ Active member and Orange representative at the W3C Device API Working Group and 
 ### Fraise
 
 *2009 - 2010*
+
+[Github Repository](https://github.com/jfmoy/fraise)
 
 Creator and main contributor of Fraise, a nimble but powerful open-source text editor for macOS.
 
