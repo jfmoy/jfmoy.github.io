@@ -7,10 +7,6 @@ theme = 'butler'
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
@@ -20,7 +16,11 @@ description = "The personal blog of Jean-Francois 'Jeff' Moy, Software Engineer 
 
 generate_feed = true
 
-taxonomies = []
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "zenburn"
 
 [extra]
 butler_nav_bar = [
@@ -28,6 +28,9 @@ butler_nav_bar = [
     {url = "$BASE_URL/resume", name = "Resume"},
 ]
 keywords = "software, engineer, cto, technology, docker, typescript, web, react, spring, kubernetes, android, kotlin, computer, java, python, moy, jean-francois, jeff, aws, devops, blog, french, london, uk, united kingdom, france"
+
+[extra.disqus]
+shortname = ""
 
 [extra.author]
 name = "Jean-Francois 'Jeff' Moy"
