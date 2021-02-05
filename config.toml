@@ -29,9 +29,6 @@ butler_nav_bar = [
 ]
 keywords = "software, engineer, cto, technology, docker, typescript, web, react, spring, kubernetes, android, kotlin, computer, java, python, moy, jean-francois, jeff, aws, devops, blog, french, london, uk, united kingdom, france"
 
-[extra.disqus]
-shortname = ""
-
 [extra.author]
 name = "Jean-Francois 'Jeff' Moy"
 
