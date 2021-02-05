@@ -3,8 +3,8 @@ title = "Extra robustness in your Koa projects with Typescript"
 date = 2021-02-05
 slug = "koa-typings"
 [extra]
-hn = ""
-lobsters = ""
+hn = "26041047"
+lobsters = "wzxbh6/extra_robustness_your_koa_projects_with"
 +++
 
 With a bit of Typescript magic, it is possible to add strict typing to the body of Koa requests and responses.
