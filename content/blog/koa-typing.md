@@ -11,7 +11,7 @@ With a bit of Typescript magic, it is possible to add strict typing to the body 
 
 <!-- more -->
 
-Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and [Koa-Body](https://github.com/dlau/koa-body) default types use `any` for the request and response body type. 
+Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and [Koa-Body](https://github.com/dlau/koa-body)) default types use `any` for the request and response body type. 
 
 This short blog post will show how you can add more robustness to your controllers by typing your bodies thanks to a simple generic interface.
 
