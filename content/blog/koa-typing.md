@@ -11,7 +11,7 @@ With a bit of Typescript magic, it is possible to add strict typing to the body 
 
 <!-- more -->
 
-Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and [Koa-Body](https://github.com/dlau/koa-body)) default types use `any` for the request and response body type. 
+Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and [Koa-Body](https://github.com/dlau/koa-body)) default types use `any` for the request and response body type.
 
 This short blog post will show how you can add more robustness to your controllers by typing your bodies thanks to a simple generic interface.
 
@@ -34,7 +34,11 @@ export interface KoaContext<RequestBody = any, ResponseBody = any> extends Conte
 export interface KoaResponseContext<ResponseBody> extends KoaContext<any, ResponseBody> {}
 ```
 
-I am actually surprised that those are not the original type definitions in `@types/koa` and `@types/koa-body` but I am sure they had their reasons.
+Having typed bodies should not prevent you from runtime checking the request bodies to ensure that you were provided with a valid input. If you are composing middlewares, you probably runtime check up the chain, and having typed bodies downstream where you know the input has been validated prevents you from duplicating the checks.
+
+For assembling responses, having type safety at the compiler level should prove enough.
+
+I am actually surprised that those are not the original type definitions in `@types/koa` and `@types/koa-body` but I am sure they had their reasons. 
 
 ## Examples
 
@@ -82,4 +86,4 @@ The `KoaContext` interface uses default value for the generics; this allows spec
 
 ## Conclusion
 
-Leveraging Typescript and generics, we were able to add stricter typing to Koa. That's it for today!
+Leveraging Typescript and generics, we were able to add stricter typing to Koa. This should help you when composing middlewares and working with request bodies, and to  That's it for today!
