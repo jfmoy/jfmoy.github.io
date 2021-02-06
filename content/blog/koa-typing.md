@@ -86,4 +86,4 @@ The `KoaContext` interface uses default value for the generics; this allows spec
 
 ## Conclusion
 
-Leveraging Typescript and generics, we were able to add stricter typing to Koa. This should help you when composing middlewares and working with request bodies, and to  That's it for today!
+Leveraging Typescript and generics, we were able to add stricter typing to Koa. This should help you when composing middlewares, and assembling your response bodies. Happy coding!
