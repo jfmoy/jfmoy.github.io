@@ -3,7 +3,7 @@
 
 # Who am I?
 
-My name is Jean-François Moy. I am a French Software Engineer living in London, United Kingdom. I currently work as CTO of [Ksubaka](https://ksubaka.com), a software and retail startup on a mission to save our high streets thanks to engaging digital experiences. Over the past five years, we have built a powerful platform driving and monitoring thousands of screens across the world.
+My name is Jean-François Moy. I am a French Software Engineer living in London, United Kingdom. I currently work as CTO of [Cloudshelf](https://cloudshelf.ai) and [Ksubaka](https://ksubaka.com), two software and retail startup on a mission to save our high streets thanks to engaging digital experiences. Over the past six years, we have built a powerful platform generating billions of engagements by millions of shoppers on thousands of autonomous screens across the world.
 
 # Want to get in touch?
 
@@ -16,4 +16,4 @@ Want to know a bit more about me? Feel free to reach out to me on any platform b
 
 You may find some of my profiles to be a bit empty. I experimented last year with deleting all my social accounts.
 
-You can also check out my [resume](/resume).
+Want to know more? You can check out my [resume](/resume).
