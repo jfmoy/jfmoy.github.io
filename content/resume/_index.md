@@ -1,26 +1,47 @@
 +++
 +++
 
-
-**I am currently looking for a new role as CTO, Technical Lead, or Staff Engineer starting in September 2021.**
-
 # Resume
 
-A PDF version is available to [download](<Jean-Francois_Moy-Resume.pdf>).
+Additional information is available on my [LinkedIn profile](https://www.linkedin.com/in/jeanfrancoismoy).
 
 ## Summary
 
-Chief Technical Officer / Technical Lead with 11 years of experience, with a proven record of designing and implementing high-performance and scalable software applications.
+Chief Technical Officer / VP of Engineering with 12 years of experience, with a proven record of designing and implementing high-performance and scalable software applications.
 
-Worked at C-level with early and late-stage startups, closely collaborating with other c-level executives, board members.
+Worked at C-level with early and late-stage startups, closely collaborating with other C-level executives, board members.
 
 Hired, led and mentored numerous high performing Engineering teams. Built successful performance, career and reporting frameworks for team members.
 
 ## Experience
 
+### VP (Vice President) of Engineering - Vestiaire Collective - London, United Kingdom
+
+*August 2021 - Present*
+
+Engineering lead for the Consignment, VIP and Resale As A Service (RaaS) businesses for Vestiaire Collective.
+
+I am responsible for the architecture and technical design that power the global growth of the businesses through a scalable and robust architecture and implementation.
+
+I have dedicated myself to hire a talented team of Backend, Frontend and QA Engineers to support the growth of the platform. I spend time mentoring the team and sharing my experience in building scalable engineering platforms.
+
+The team works as a startup within a startup, and I frequently contribute to implementing complex features across the stack.
+
+In the first six months of my tenure, I was also the Interim VP Engineering of the Conversion Collective based in Paris (~30 Engineers across 4 squads). I notably led the design and architecture of an in-house Rule Engine that provides flexibility and performance for defining and executing business rules and is now used across the entire organisation(shipping, fees, customisation, etc.).
+
+- Hire and lead a talented team of Engineers across Backend, Frontend and QA. I encourage a Product Engineering mindset across the team.
+- Lead the technical design and architecture of the platform that powers the Consignment & RaaS businesses.
+- Set up robust and automated workflows and release processes.
+- Actively contribute to the Product definition and design.
+- Initiative and lead transverse task forces to tackle critical technical topics for the growth of the VC marketplace.
+
+**Keywords: Unicorn, Typescript, Nest.js, MongoDB, Redis, Angular 14**
+
 ### CTO (Chief Technology Officer) - Cloudshelf - London, United Kingdom
 
-Work as interim CTO for Cloudshelf, a solution integrating with Shopify for bridging the gap between retailers' e-commerce platforms and their brick and mortar stores.
+*February 2021 - July 2021*
+
+Worked as interim CTO for Cloudshelf, a solution integrating with Shopify for bridging the gap between retailers' e-commerce platforms and their brick and mortar stores.
 
 - Led the development of the MVP with a release on the Shopify app store in mid-2021.
 - Designed a platform that can easily integrate with other popular e-commerce platforms (WooCommerce, Magento, etc.)
@@ -30,7 +51,7 @@ Work as interim CTO for Cloudshelf, a solution integrating with Shopify for brid
 
 ### CTO (Chief Technology Officer) - Ksubaka - London, United Kingdom
 
-*January 2015 - Present*
+*January 2015 - July 2021*
 
 Worked as CTO for Ksubaka, a company providing powerful immersive brand experience & data platform which allows brands & retailers to link offline customers to online profiles.
 

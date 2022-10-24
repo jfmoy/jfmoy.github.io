@@ -3,7 +3,7 @@
 
 # Who am I?
 
-My name is Jean-François Moy. I am a French Software Engineer living in London, United Kingdom. I currently work as CTO of [Cloudshelf](https://cloudshelf.ai) and [Ksubaka](https://ksubaka.com), two software and retail startup on a mission to save our high streets thanks to engaging digital experiences. Over the past six years, we have built a powerful platform generating billions of engagements by millions of shoppers on thousands of autonomous screens across the world.
+My name is Jean-François Moy. I am a French Software Engineer living in London, United Kingdom. I currently work as VP of Engineering of [Vestiaire Collective](https://www.vestiairecollective.com), a Luxury Fashion marketplace on a mission to lead the Fashion industry towards a more sustainable future thanks to circular economy.
 
 # Want to get in touch?
 
