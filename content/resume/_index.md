@@ -19,23 +19,23 @@ Hired, led and mentored numerous high performing Engineering teams. Built succes
 
 *August 2021 - Present*
 
-Engineering lead for the Consignment, VIP and Resale As A Service (RaaS) businesses for Vestiaire Collective.
+Engineering lead for the Seller Experience Collective (Tribe) at Vestiaire Collective.
 
-I am responsible for the architecture and technical design that power the global growth of the businesses through a scalable and robust architecture and implementation.
+As Vice President of Engineering at Vestiaire Collective, I steer the Seller Experience Collective, a diverse, global team. Our Collective comprises three squads focused on distinct seller segments within our international luxury fashion marketplace, providing tailored experiences to enhance engagement, user experience and efficiency.
 
-I have dedicated myself to hire a talented team of Backend, Frontend and QA Engineers to support the growth of the platform. I spend time mentoring the team and sharing my experience in building scalable engineering platforms.
+My remit extends to key aspects of the selling process, catering to a wide array of business types. I oversee critical features like item deposition, commission structures, buyer-seller negotiation, chat functionality, price drops, and product taxonomy, providing tailored solutions for each business type including Consumer-to-Consumer (C2C), Business-to-Consumer (B2C), Consignment, and Brand partners. A landmark achievement has been our 'Resale As A Service' platform, a PAAS solution that empowers luxury brands to offer second-hand service, bolstering industry sustainability.
 
-The team works as a startup within a startup, and I frequently contribute to implementing complex features across the stack.
+Beyond leadership, I recruit and guide an all-star team, and I occasionally contribute hands-on in complex scenarios. Additionally, I play a significant role in shaping our product roadmap, ensuring our technological advancements align with market needs. My role in refining company-wide processes and participating in the architectural group guides the technical evolution of Vestiaire Collective.
 
-In the first six months of my tenure, I was also the Interim VP Engineering of the Conversion Collective based in Paris (~30 Engineers across 4 squads). I notably led the design and architecture of an in-house Rule Engine that provides flexibility and performance for defining and executing business rules and is now used across the entire organisation(shipping, fees, customisation, etc.).
+In the first six months of my tenure, I was also the Interim VP Engineering of the Conversion Collective based in Paris (~30 Engineers across 4 squads). I notably led the design and architecture of an in-house Rule Engine that provides flexibility and performance for defining and executing business rules and is now used across the entire organisation (shipping, fees, customisation, etc.).
 
-- Hire and lead a talented team of Engineers across Backend, Frontend and QA. I encourage a Product Engineering mindset across the team.
-- Lead the technical design and architecture of the platform that powers the Consignment & RaaS businesses.
+- Hire and lead a talented team of Engineering Managers anEngineers across Backend, Mobile, Frontend and QA. I encourage a Product Engineering mindset across the team.
+- Contribute to the architecture and system design of key 
 - Set up robust and automated workflows and release processes.
 - Actively contribute to the Product definition and design.
 - Initiative and lead transverse task forces to tackle critical technical topics for the growth of the VC marketplace.
 
-**Keywords: Unicorn, Typescript, Nest.js, MongoDB, Redis, Angular 14**
+**Keywords: Leadership, Recruitment, Architecture, System Design, Methodologies, Processes, Product Engineering**
 
 ### CTO (Chief Technology Officer) - Cloudshelf - London, United Kingdom
 
