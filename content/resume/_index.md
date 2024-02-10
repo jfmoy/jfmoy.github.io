@@ -7,7 +7,7 @@ Additional information is available on my [LinkedIn profile](https://www.linkedi
 
 ## Summary
 
-Chief Technical Officer / VP of Engineering with 12 years of experience, with a proven record of designing and implementing high-performance and scalable software applications.
+Chief Technical Officer / VP of Engineering with 15 years of experience, with a proven record of designing and implementing high-performance and scalable software applications.
 
 Worked at C-level with early and late-stage startups, closely collaborating with other C-level executives, board members.
 
@@ -23,17 +23,23 @@ Engineering lead for the Seller Experience Collective (Tribe) at Vestiaire Colle
 
 As Vice President of Engineering at Vestiaire Collective, I steer the Seller Experience Collective, a diverse, global team. Our Collective comprises three squads focused on distinct seller segments within our international luxury fashion marketplace, providing tailored experiences to enhance engagement, user experience and efficiency.
 
-My remit extends to key aspects of the selling process, catering to a wide array of business types. I oversee critical features like item deposition, commission structures, buyer-seller negotiation, chat functionality, price drops, and product taxonomy, providing tailored solutions for each business type including Consumer-to-Consumer (C2C), Business-to-Consumer (B2C), Consignment, and Brand partners. A landmark achievement has been our 'Resale As A Service' platform, a PAAS solution that empowers luxury brands to offer second-hand service, bolstering industry sustainability.
+My remit extends to key aspects of the selling process, catering to a wide array of business types. I oversee critical features like item deposition, commission structures, buyer-seller negotiation, chat functionality, price drops, and product taxonomy, providing tailored solutions for each business type including Consumer-to-Consumer (C2C), Business-to-Consumer (B2C), Consignment, and Brand partners. With my team, we delivered numerous breakthroughs across the seller scope, including a complete transformation of Vestiaire Collective monetisation strategy.
+
+A landmark achievement has been our 'Resale As A Service' platform, a PAAS solution that empowers luxury brands to offer second-hand service, bolstering industry sustainability.
+
+In addition to leading the Seller Experience Collective, I have recently taken on the role of leader of the architecture group, where I am instrumental in coordinating and enabling the advancement of the engineering culture and standards of Vestiaire Collective.
 
 Beyond leadership, I recruit and guide an all-star team, and I occasionally contribute hands-on in complex scenarios. Additionally, I play a significant role in shaping our product roadmap, ensuring our technological advancements align with market needs. My role in refining company-wide processes and participating in the architectural group guides the technical evolution of Vestiaire Collective.
 
 In the first six months of my tenure, I was also the Interim VP Engineering of the Conversion Collective based in Paris (~30 Engineers across 4 squads). I notably led the design and architecture of an in-house Rule Engine that provides flexibility and performance for defining and executing business rules and is now used across the entire organisation (shipping, fees, customisation, etc.).
 
-- Hire and lead a talented team of Engineering Managers anEngineers across Backend, Mobile, Frontend and QA. I encourage a Product Engineering mindset across the team.
-- Contribute to the architecture and system design of key 
+- Hire and lead a talented team of Engineering Managers and Engineers across Backend, Data Science, Mobile, Frontend and QA. I encourage a Product Engineering mindset across the team, and strong individula and collective ownership of our scope.
+- Help define, orchestrate, and pilot ambitious engineering OKRs, further enabling our business by improving the technical foundations of our platform.
+- Contribute to the architecture and system design of key processes and systems.
 - Set up robust and automated workflows and release processes.
 - Actively contribute to the Product definition and design.
 - Initiative and lead transverse task forces to tackle critical technical topics for the growth of the VC marketplace.
+- Lead the architecture group and drive the engineering culture to position Vestiaire Collective as a leading tech company.
 
 **Keywords: Leadership, Recruitment, Architecture, System Design, Methodologies, Processes, Product Engineering**
 
