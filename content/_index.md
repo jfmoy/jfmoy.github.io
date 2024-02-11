@@ -3,7 +3,9 @@
 
 # Who am I?
 
-My name is Jean-François Moy. I am a French Software Engineer living in London, United Kingdom. I currently work as VP of Engineering of [Vestiaire Collective](https://www.vestiairecollective.com), a Luxury Fashion marketplace on a mission to lead the Fashion industry towards a more sustainable future thanks to circular economy.
+My name is Jean-François Moy. I am French Technical Leader living in London, United Kingdom.
+
+I currently work as a VP of Engineering for [Vestiaire Collective](https://www.vestiairecollective.com), a Luxury Fashion marketplace on a mission to lead the Fashion industry towards a more sustainable future thanks to circular economy.
 
 # Want to get in touch?
 

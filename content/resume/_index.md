@@ -7,11 +7,13 @@ Additional information is available on my [LinkedIn profile](https://www.linkedi
 
 ## Summary
 
-Chief Technical Officer / VP of Engineering with 15 years of experience, with a proven record of designing and implementing high-performance and scalable software applications.
+Chief Technology Officer / Vice President of Engineering with over 14 years of experience, blending strategic leadership with a hands-on technical approach to drive the design and deployment of high-performance, scalable software solutions.
 
-Worked at C-level with early and late-stage startups, closely collaborating with other C-level executives, board members.
+My background in software engineering enables me to deeply understand and actively contribute to the technical work of my teams, empowering them to achieve excellence.
 
-Hired, led and mentored numerous high performing Engineering teams. Built successful performance, career and reporting frameworks for team members.
+Proven success in executive roles within dynamic startup environments, leveraging close collaboration with my peers, C-level executives and board members to foster business growth and technological innovation.
+
+Adept at assembling, leading, and mentoring diverse, high-performing engineering teams, establishing frameworks that promote team excellence and individual growth.
 
 ## Experience
 
@@ -19,39 +21,29 @@ Hired, led and mentored numerous high performing Engineering teams. Built succes
 
 *August 2021 - Present*
 
-Engineering lead for the Seller Experience Collective (Tribe) at Vestiaire Collective.
+As the Vice President of Engineering at Vestiaire Collective, I lead the Seller Experience Collective, orchestrating a global, multidisciplinary team to innovate and enhance our luxury fashion marketplace through strategic leadership, technological advancement, and process optimization.
 
-As Vice President of Engineering at Vestiaire Collective, I steer the Seller Experience Collective, a diverse, global team. Our Collective comprises three squads focused on distinct seller segments within our international luxury fashion marketplace, providing tailored experiences to enhance engagement, user experience and efficiency.
+- **Strategic Leadership**: Spearhead two end to end squads and a Data Science team focusing on tailored seller experiences, improving engagement, and operational efficiency across diverse seller segments.
+- **Innovation and Delivery**: Co-directed the overhaul of the monetisation strategy and launched Vestiaire Collective 'Resale As A Service' platform, significantly contributing to the luxury sector's sustainability and leveraged by prestigious brands such as Gucci, Chloé, MyTheresa and others.
+- **Technical Oversight**: Oversee crucial selling process features including item listing and depositing, pricing strategies, negotiations, buyer/seller chat, and product taxonomy for various business models (C2C, B2C, Consignment, Brand partners).
+- **Engineering Culture**: Recently assumed leadership of the architecture group, enhancing engineering standards and fostering a culture of excellence.
+- **Team Development**: Recruit and mentor a high-caliber engineering team, promoting a product engineering mindset and strong ownership.
+- **Operational Excellence**: Established robust, automated workflows and release processes, significantly improving operational reliability and speed.
+- **Product Strategy**: Actively involved in product roadmap planning, ensuring alignment with technological capabilities and market demands.
+- **Cross-functional Initiatives**: Initiated and led cross-functional task forces to address critical technical challenges, driving the marketplace's growth.
+- **Interim Leadership**: Temporarily led the Conversion Collective, overseeing 30 engineers and the creation of a versatile in-house Rule Engine now pivotal across the organization.
 
-My remit extends to key aspects of the selling process, catering to a wide array of business types. I oversee critical features like item deposition, commission structures, buyer-seller negotiation, chat functionality, price drops, and product taxonomy, providing tailored solutions for each business type including Consumer-to-Consumer (C2C), Business-to-Consumer (B2C), Consignment, and Brand partners. With my team, we delivered numerous breakthroughs across the seller scope, including a complete transformation of Vestiaire Collective monetisation strategy.
-
-A landmark achievement has been our 'Resale As A Service' platform, a PAAS solution that empowers luxury brands to offer second-hand service, bolstering industry sustainability.
-
-In addition to leading the Seller Experience Collective, I have recently taken on the role of leader of the architecture group, where I am instrumental in coordinating and enabling the advancement of the engineering culture and standards of Vestiaire Collective.
-
-Beyond leadership, I recruit and guide an all-star team, and I occasionally contribute hands-on in complex scenarios. Additionally, I play a significant role in shaping our product roadmap, ensuring our technological advancements align with market needs. My role in refining company-wide processes and participating in the architectural group guides the technical evolution of Vestiaire Collective.
-
-In the first six months of my tenure, I was also the Interim VP Engineering of the Conversion Collective based in Paris (~30 Engineers across 4 squads). I notably led the design and architecture of an in-house Rule Engine that provides flexibility and performance for defining and executing business rules and is now used across the entire organisation (shipping, fees, customisation, etc.).
-
-- Hire and lead a talented team of Engineering Managers and Engineers across Backend, Data Science, Mobile, Frontend and QA. I encourage a Product Engineering mindset across the team, and strong individula and collective ownership of our scope.
-- Help define, orchestrate, and pilot ambitious engineering OKRs, further enabling our business by improving the technical foundations of our platform.
-- Contribute to the architecture and system design of key processes and systems.
-- Set up robust and automated workflows and release processes.
-- Actively contribute to the Product definition and design.
-- Initiative and lead transverse task forces to tackle critical technical topics for the growth of the VC marketplace.
-- Lead the architecture group and drive the engineering culture to position Vestiaire Collective as a leading tech company.
-
-**Keywords: Leadership, Recruitment, Architecture, System Design, Methodologies, Processes, Product Engineering**
+**Keywords: Technical Leadership, Engineering Governance, Architecture, System Design, Methodologies, Processes, Product Engineering, Recruitment**
 
 ### CTO (Chief Technology Officer) - Cloudshelf - London, United Kingdom
 
 *February 2021 - July 2021*
 
-Worked as interim CTO for Cloudshelf, a solution integrating with Shopify for bridging the gap between retailers' e-commerce platforms and their brick and mortar stores.
+In my role as Interim CTO for Cloudshelf, I spearheaded the creation and launch of an innovative solution that seamlessly connects retailers' e-commerce platforms with their physical stores, focusing on strategic development, platform integration, and team building.
 
-- Led the development of the MVP with a release on the Shopify app store in mid-2021.
-- Designed a platform that can easily integrate with other popular e-commerce platforms (WooCommerce, Magento, etc.)
-- Hired a great Engineering team to support the growth of the company in the future.
+- **MVP Leadership**: Directed the development and successful launch of the MVP on the Shopify app store, marking a significant milestone in mid-2021.
+- **Platform Integration**: Engineered a versatile platform designed for easy integration with leading e-commerce platforms, including WooCommerce and Magento, enhancing retailer accessibility and utility.
+- **Team Formation**: Recruited a highly skilled Engineering team to support and accelerate the company's growth trajectory.
 
 **Keywords: Angel round startup, MVP, leadership, Typescript, Nest.js, Postgres, Redis, Next.js, React**
 
@@ -59,14 +51,14 @@ Worked as interim CTO for Cloudshelf, a solution integrating with Shopify for br
 
 *January 2015 - July 2021*
 
-Worked as CTO for Ksubaka, a company providing powerful immersive brand experience & data platform which allows brands & retailers to link offline customers to online profiles.
+As CTO at Ksubaka, I was pivotal in creating an immersive brand experience and data platform, linking offline customers to online profiles through leadership in technology strategy, product development, and cross-continental team collaboration.
 
-- Led the design and development of a complex platform capable of operating thousands of autonomous devices and generating billions of engagements from millions of shoppers worldwide.
-- Assembled and led an internal Engineering team of 12 talented Backend, Web, Mobile, QA and DevOps engineers to support the growth of the business.
-- Worked hand in hand with stakeholders and board members to implement the company's vision through transverse technicals solutions, and AGILE methodologies.
-- Actively contributed, and led, the design and specification of new features and products.
-- Led the design and the development of Ksubaka OS, an Android 8+ AOSP flavour focusing on resilience, reliability, and self-repairability.
-- Implemented the Ksubaka Android & Web SDKs, allowing third parties to deploy their applications on the Ksubaka platform quickly.
+- **Platform Development:** Engineered a sophisticated platform managing thousands of autonomous devices, facilitating billions of shopper engagements globally.
+- **Team Leadership:** Built and directed a diverse Engineering team of 12 specialists in Backend, Web, Mobile, Data Science, QA, and DevOps, scaling the business's technological capabilities.
+- **Global Collaboration:** Led external software engineering agencies and gaming studios across Europe and Asia, extending the internal team's capabilities.
+- **Strategic Partnerships:** Collaborated closely with stakeholders and board members to translate the company vision into actionable, agile product and technical strategies.
+- **Innovation:** Spearheaded the development and specification of cutting-edge features and products, including the creation of Ksubaka OS for enhanced Android device resilience and reliability.
+- **Software and SDK Development:** Developed Ksubaka Android & Web SDKs, enabling swift third-party application deployment on our platform.
 
 **Keywords: Corporate Funded Startup, Leadership, Team Growth, Mentorship, Hiring, Android, AOSP, Springboot, MySQL, Postgres, React, Amazon AWS, Splunk, Big Data, Microservices, Kotlin, Java, Typescript, Javascript, Python**
 
@@ -90,9 +82,9 @@ Worked as Software Engineer in the Web & Browser team at Canonical.
 Joined Orange R&D lab in London as Software Engineer. Demonstrated leadership and great technical capabilities, led to a quick promotion to Senior Software Engineer. Given big responsibilities, notably acting as Orange representative in various W3C interest groups.
 
 - Technical Leadership of a team of 4 - 6 Software Engineers building the Web client of an OTT Messaging application (Libon).
-- Technical Leadership of a team of 2-4 Software Engineers building a low-level Visual Voicemail stack on Android (OMTP).
+- Technical Leadership of a team of 2 - 4 Software Engineers building a low-level Visual Voicemail stack on Android (OMTP) in collaboration with Google.
 - Orange representative at W3C.
-- Younger Software Engineer in the Orange Software Champions board
+- Younger Software Engineer in the Orange Software Champions board.
 
 **Keywords: Android AOSP, JAVA, HTML5, Javascript, AngularJS, Backbone, W3C, Qt, C++**
 
