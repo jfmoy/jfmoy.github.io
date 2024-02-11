@@ -10,9 +10,9 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-title = "Jean-Francois 'Jeff' Moy"
+title = "Jean-François 'Jeff' Moy"
 
-description = "The personal blog of Jean-Francois 'Jeff' Moy, Technical Lead & Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka."
+description = "The personal blog of Jean-François 'Jeff' Moy, Technical Lead & Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka."
 
 generate_feed = true
 
