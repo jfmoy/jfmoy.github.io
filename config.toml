@@ -10,9 +10,9 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-title = "Jean-François 'Jeff' Moy"
+title = "Jean-François Moy"
 
-description = "The personal blog of Jean-François 'Jeff' Moy, Technical Lead & Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka."
+description = "The personal blog of Jean-François Moy, Technical Lead & Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka."
 
 generate_feed = true
 
@@ -30,7 +30,7 @@ butler_nav_bar = [
 keywords = "software, engineer, leadership, technology, unicorn, startup, cto, vp, vice president, engineering, technology, docker, typescript, web, react, spring, kubernetes, android, kotlin, computer, java, python, moy, jean-francois, jeff, aws, devops, blog, french, london, uk, united kingdom, france"
 
 [extra.author]
-name = "Jean-Francois 'Jeff' Moy"
+name = "Jean-Francois Moy"
 
 email.id = "jf@moy.me.uk"
 
