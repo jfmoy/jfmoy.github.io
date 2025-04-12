@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+  Extra robustness in your Koa projects with Typescript
+</title>
+
+    
+    <meta name="description" content="With a bit of Typescript magic, it is possible to add strict typing to the body of Koa requests and responses.
+">
+
+    
+
+
+    
+        <meta name="author" content="Jean-Francois Moy">
+
+        <link rel="author" href="https:&#x2F;&#x2F;twitter.com&#x2F;moystard">
+        
+            <link href="https:&#x2F;&#x2F;www.moystard.com&#x2F;blog&#x2F;koa-typings&#x2F;" rel="canonical">
+        
+         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://www.moystard.com/atom.xml">
+    
+
+    
+    
+        <meta name="twitter:site" content="@moystard">
+        <meta name="twitter:creator" content="@moystard">
+
+        <meta property="og:type" content="article">
+        
+            <meta property="og:url" content="https:&#x2F;&#x2F;www.moystard.com&#x2F;blog&#x2F;koa-typings&#x2F;">
+        
+
+        
+        <meta property="og:description" content="The personal blog of Jean-François Moy, Technical Lead &amp; Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka.">
+        
+    
+    <meta name="twitter:title" content="Extra robustness in your Koa projects with Typescript &mdash; Jean-François Moy">
+    <meta property="og:title" content="Extra robustness in your Koa projects with Typescript">
+
+
+    
+    
+
+
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.moystard.com/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://www.moystard.com/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.moystard.com/icons/favicon-16x16.png">
+        <link rel="manifest" href="https://www.moystard.com/icons/manifest.json">
+        <link rel="mask-icon" href="https://www.moystard.com/icons/safari-pinned-tab.svg">
+        <link rel="shortcut icon" href="https://www.moystard.com/icons/favicon.ico">
+        <meta name="msapplication-config" content="https://www.moystard.com/icons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    
+
+    
+
+    
+        <style>
+            /*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:"sans-serif";-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}.image-row{display:flex;flex-flow:row wrap;align-items:center;padding:0 4px}.image-column{flex:50%;max-width:50%;padding:0 4px;border-radius:8px;width:100%;height:auto}@media screen and (max-width: 60em){.image-column{flex:100%;max-width:100%}}.text-center{text-align:center}.text-right{text-align:right}.fa-social-icons{font-size:2rem;margin-top:-1rem}.fa-social-icons a{border:0;margin-right:0.1rem}.fa-social-icons a:last-child{margin-right:0}.masthead,.content,.footer{max-width:60em;margin-left:auto;margin-right:auto}.masthead:after,.post:after,.related:after,.recent:after,.page:after,.comments:after,.index:after{display:block;content:"";width:150px;height:1px;margin:2rem auto;background-color:#c4c4c4}.related .related-title,.related .recent-title,.recent .related-title,.recent .recent-title{margin-top:0}.masthead{margin-bottom:2rem}.masthead a{color:#111}.masthead .masthead-title{margin:0;padding:0}.masthead .masthead-title a{text-decoration:none;border:0}@media (min-width: 60em){.masthead .masthead-title{float:left}}.masthead .masthead-nav{display:inline-block;padding-left:0;margin-bottom:0}.masthead .masthead-nav a{text-decoration:none;border:0}.masthead .masthead-nav a+a{margin-left:0.6rem}@media (min-width: 60em){.masthead{padding-top:1rem;text-align:right}}.footer{margin-bottom:1rem;text-align:center}.footer a[rel="license"]:first-child{display:inline-block;margin:0;padding:0;border:0;text-decoration:none}.footer .icon-square{color:transparent}.footer .icon-square:hover{color:#252525}.footer .fa-stack-1x{color:black}.footer p>span{font-size:110%}.footer p>span a{padding:2px;border:0}.footer p>span i:hover{color:white}.footer p p:last-child{margin-bottom:0}.posts{padding-bottom:1rem}.posts .posts-item{margin-bottom:1rem}@media (min-width: 60em){.posts .posts-item{margin-bottom:0.2rem}}.posts a{border:0}.posts time{display:block;color:#848484}@media (min-width: 60em){.posts time{margin-top:2px;float:right}}.next,.previous{font-weight:600;font-size:20px;transition:transform 0.3s ease-out}.next{float:right}.next:hover{transform:translateX(4px)}.previous{float:left}.previous:hover{transform:translateX(-4px)}html,body{margin:0}html{font-family:"Lora","sans-serif";font-size:18px;line-height:1.6}@media (min-width: 60em){html{font-size:20px}}body{padding:2rem 1.5rem;color:#444;background-color:#fff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a{color:#2B488B;text-decoration:none;border-bottom:1px solid #2B488B}a:hover,a:focus{background-color:#2B488B;color:white}a strong{color:inherit}img{display:block;max-width:100%;margin:0 0 1rem;border-radius:5px}table{margin-bottom:1rem;width:100%;font-size:85%;border:1px solid #c4c4c4;border-collapse:collapse}.js-file-line-container td{border:none}td,th{padding:.25rem .5rem;border:1px solid #c4c4c4}th{text-align:left}tbody tr:nth-child(even) td,tbody tr:nth-child(even) th{background-color:#fff}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#fafafa}
+
+        </style>
+    
+
+    
+      <style>
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: italic;
+          font-weight: 400;
+          font-display: swap;
+          src: url(https://www.moystard.com/fonts/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFoq92nA.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(https://www.moystard.com/fonts/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkq0.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url(https://www.moystard.com/fonts/0QI6MX1D_JOuGQbT0gvTJPa787z5vBJBkq0.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+      </style>
+    
+  </head>
+
+  <body>
+    
+        <link rel="stylesheet" href="https://www.moystard.com/style.css">
+    
+
+    
+        <header class="masthead">
+          <h3 class="masthead-title">
+            <a href="https:&#x2F;&#x2F;www.moystard.com">Jean-Francois Moy</a>
+          </h3>
+          <nav class="masthead-nav">
+            
+            <a href="&#x2F;blog" class="nav-item">Blog</a>
+            
+            <a href="&#x2F;resume" class="nav-item">Resume</a>
+            
+          </nav>
+        </header>
+    
+
+
+    <main class="content">
+        
+
+<article class="post">
+  <header class="post-header">
+    <time datetime="2021-02-05" class="post-date">
+        05 Feb 2021
+    </time>
+        
+        <small>
+            · 
+    <span class="reading-time" title="Estimated read time">
+      
+        1 min read
+      
+    </span>
+
+        </small>
+    <h1 class="post-title">Extra robustness in your Koa projects with Typescript</h1>
+  </header>
+
+  <p>With a bit of Typescript magic, it is possible to add strict typing to the body of Koa requests and responses.</p>
+<span id="continue-reading"></span>
+<p>Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and <a href="https://github.com/dlau/koa-body">Koa-Body</a>) default types use <code>any</code> for the request and response body type.</p>
+<p>This short blog post will show how you can add more robustness to your controllers by typing your bodies thanks to a simple generic interface.</p>
+<h1 id="sparkling-koa-with-genericity">Sparkling Koa with Genericity</h1>
+<p>We want to be able to provide the types of the request and the response body, whilst keeping the built-in flexibility. That's easy to achieve with Typescript generics as demonstrated below:</p>
+<pre data-lang="ts" style="background-color:#393939;color:#dedede;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fed6af;">import </span><span>{ Context, Request } </span><span style="color:#fed6af;">from </span><span style="color:#d6d6d680;">&#39;</span><span style="color:#d68686;">koa</span><span style="color:#d6d6d680;">&#39;</span><span>;
+</span><span>
+</span><span style="color:#fffb9d;">interface </span><span style="color:#d6d6d6;">KoaRequest</span><span>&lt;</span><span style="color:#d6d6d6;">RequestBody </span><span style="color:#ececec;">= </span><span style="color:#fffb9d;">any</span><span>&gt; </span><span style="color:#fffb9d;">extends </span><span style="color:#d78d1b;">Request </span><span>{
+</span><span>    body</span><span style="color:#ececec;">?: </span><span style="color:#d6d6d6;">RequestBody</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#fed6af;">export </span><span style="color:#fffb9d;">interface </span><span style="color:#d6d6d6;">KoaContext</span><span>&lt;</span><span style="color:#d6d6d6;">RequestBody </span><span style="color:#ececec;">= </span><span style="color:#fffb9d;">any</span><span>, </span><span style="color:#d6d6d6;">ResponseBody </span><span style="color:#ececec;">= </span><span style="color:#fffb9d;">any</span><span>&gt; </span><span style="color:#fffb9d;">extends </span><span style="color:#d78d1b;">Context </span><span>{
+</span><span>    request</span><span style="color:#ececec;">: </span><span style="color:#d6d6d6;">KoaRequest</span><span>&lt;</span><span style="color:#d6d6d6;">RequestBody</span><span>&gt;;
+</span><span>    body</span><span style="color:#ececec;">: </span><span style="color:#d6d6d6;">ResponseBody</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#fed6af;">export </span><span style="color:#fffb9d;">interface </span><span style="color:#d6d6d6;">KoaResponseContext</span><span>&lt;</span><span style="color:#d6d6d6;">ResponseBody</span><span>&gt; </span><span style="color:#fffb9d;">extends </span><span style="color:#d78d1b;">KoaContext</span><span>&lt;</span><span style="color:#fffb9d;">any</span><span>, </span><span style="color:#d6d6d6;">ResponseBody</span><span>&gt; {}
+</span></code></pre>
+<p>Having typed bodies should not prevent you from runtime checking the request bodies to ensure that you were provided with a valid input. If you are composing middlewares, you probably runtime check up the chain, and having typed bodies downstream where you know the input has been validated prevents you from duplicating the checks.</p>
+<p>For assembling responses, having type safety at the compiler level should prove enough.</p>
+<p>I am actually surprised that those are not the original type definitions in <code>@types/koa</code> and <code>@types/koa-body</code> but I am sure they had their reasons. </p>
+<h2 id="examples">Examples</h2>
+<p>Let's put our new interfaces in practice with a couple of examples.</p>
+<pre data-lang="ts" style="background-color:#393939;color:#dedede;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fed6af;">import </span><span>Router </span><span style="color:#fed6af;">from </span><span style="color:#d6d6d680;">&#39;</span><span style="color:#d68686;">koa-router</span><span style="color:#d6d6d680;">&#39;</span><span>;
+</span><span style="color:#fed6af;">import </span><span>koaBody </span><span style="color:#fed6af;">from </span><span style="color:#d6d6d680;">&#39;</span><span style="color:#d68686;">koa-body</span><span style="color:#d6d6d680;">&#39;</span><span>;
+</span><span>
+</span><span style="color:#fffb9d;">interface </span><span style="color:#d6d6d6;">HelloWorldRequestDto </span><span>{
+</span><span>    name</span><span style="color:#ececec;">: </span><span style="color:#fffb9d;">string</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#fffb9d;">interface </span><span style="color:#d6d6d6;">HelloWorldResponseDto </span><span>{
+</span><span>    message</span><span style="color:#ececec;">: </span><span style="color:#fffb9d;">string</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#fffb9d;">const </span><span style="color:#d6d6ae;">helloRouter </span><span style="color:#ececec;">= new </span><span style="color:#d6d6d6;">Router</span><span style="color:#78cecc80;">()</span><span>;
+</span><span>
+</span><span>helloRouter.</span><span style="color:#fffd87;">post</span><span style="color:#78cecc80;">(</span><span style="color:#d6d6d680;">&#39;</span><span style="color:#d68686;">/</span><span style="color:#d6d6d680;">&#39;</span><span>, </span><span style="color:#fffd87;">koaBody</span><span style="color:#78cecc80;">()</span><span>, </span><span style="color:#fffb9d;">async </span><span>(ctx</span><span style="color:#ececec;">: </span><span style="color:#d6d6d6;">KoaContext</span><span>&lt;</span><span style="color:#d6d6d6;">HelloWorldRequestDto</span><span>, </span><span style="color:#d6d6d6;">HelloWorldResponseDto</span><span>&gt;) </span><span style="color:#fffb9d;">=&gt; </span><span>{
+</span><span style="color:#a0cfa1;">    //</span><span style="color:#87ae86;"> Request body is now typed.
+</span><span>    </span><span style="color:#fffb9d;">const </span><span>{ </span><span style="color:#d6d6ae;">name </span><span>} </span><span style="color:#ececec;">= </span><span>ctx.res.body;
+</span><span>    ctx.res.statusCode </span><span style="color:#ececec;">= </span><span style="font-weight:bold;color:#87d6d5;">200</span><span>;
+</span><span style="color:#a0cfa1;">    //</span><span style="color:#87ae86;"> Response body is also typed.
+</span><span>    ctx.body </span><span style="color:#ececec;">= </span><span>{
+</span><span>        message: </span><span style="color:#d68686;">`Hello ${name}!`</span><span>,
+</span><span>    };
+</span><span>}</span><span style="color:#78cecc80;">)</span><span>;
+</span></code></pre>
+<p>The compiler will error if we try to access properties not defined in the body types. Using the same DTO types, the code below would not compile:</p>
+<pre data-lang="ts" style="background-color:#393939;color:#dedede;" class="language-ts "><code class="language-ts" data-lang="ts"><span>helloRouter.</span><span style="color:#fffd87;">post</span><span style="color:#78cecc80;">(</span><span style="color:#d6d6d680;">&#39;</span><span style="color:#d68686;">/</span><span style="color:#d6d6d680;">&#39;</span><span>, </span><span style="color:#fffd87;">koaBody</span><span style="color:#78cecc80;">()</span><span>, </span><span style="color:#fffb9d;">async </span><span>(ctx</span><span style="color:#ececec;">: </span><span style="color:#d6d6d6;">KoaContext</span><span>&lt;</span><span style="color:#d6d6d6;">HelloWorldRequestDto</span><span>, </span><span style="color:#d6d6d6;">HelloWorldResponseDto</span><span>&gt;) </span><span style="color:#fffb9d;">=&gt; </span><span>{
+</span><span style="color:#a0cfa1;">    //</span><span style="color:#87ae86;"> The compiler will fail as lastName is not defined in `HelloWorldRequestDto`.
+</span><span>    </span><span style="color:#fffb9d;">const </span><span>{ </span><span style="color:#d6d6ae;">name</span><span>, </span><span style="color:#d6d6ae;">lastName </span><span>} </span><span style="color:#ececec;">= </span><span>ctx.res.body;
+</span><span>    ctx.res.statusCode </span><span style="color:#ececec;">= </span><span style="font-weight:bold;color:#87d6d5;">200</span><span>;
+</span><span style="color:#a0cfa1;">    //</span><span style="color:#87ae86;"> The compiler would also fail here because we are defining a property absent from `HelloWorldResponseDto`, and `message` is absent.
+</span><span>    ctx.body </span><span style="color:#ececec;">= </span><span>{
+</span><span>        msg: </span><span style="color:#d68686;">`Hello ${name}!`</span><span>,
+</span><span>    };
+</span><span>}</span><span style="color:#78cecc80;">)</span><span>;
+</span></code></pre>
+<p>The <code>KoaContext</code> interface uses default value for the generics; this allows specifying the request body type without the response's: <code>KoaContext&lt;RequestBodyType&gt;</code> will assume that the response body type is <code>any</code>. The <code>KoaResponseContext</code> allows you to specify the response body type without the request's for extra convenience.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Leveraging Typescript and generics, we were able to add stricter typing to Koa. This should help you when composing middlewares, and assembling your response bodies. Happy coding!</p>
+
+</article>
+
+
+<p>You can comment on this article on <a href="https://news.ycombinator.com/item?id=26041047" rel="nofollow">HackerNews</a> or <a href="https://lobste.rs/s/wzxbh6&#x2F;extra_robustness_your_koa_projects_with" rel="nofollow">Lobsters</a>.</p>
+
+
+
+
+    </main>
+
+    
+        <footer class="footer">
+          <p><small>
+            This work is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            CC BY-SA 4.0</a> license.
+          <br/>
+          <a href="https://www.moystard.com/atom.xml">RSS Feed</a>
+          </small></p>
+        </footer>
+    
+
+    
+  </body>
+</html>

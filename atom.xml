@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="https://www.moystard.com/feed.xslt.xml"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Jean-François Moy</title>
+    <subtitle>The personal blog of Jean-François Moy, Technical Lead &amp; Open Source Contributor. Currently VP of Engineering @ Vestiaire Collective, previously CTO @ Ksubaka.</subtitle>
+    <link href="https://www.moystard.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://www.moystard.com" rel="alternate" type="text/html" />
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>Fri, 05 Feb 2021 00:00:00 +0000</updated>
+    <id>https://www.moystard.com/atom.xml</id>
+
+    
+    <author>
+        <name>Jean-Francois Moy</name>
+      
+        <email>[object]</email>
+      
+      
+    </author>
+    
+    <entry xml:lang="en">
+        <title>Extra robustness in your Koa projects with Typescript</title>
+        <link href="https://www.moystard.com/blog/koa-typings/" type="text/html"/>
+        <published>Fri, 05 Feb 2021 00:00:00 +0000</published>
+        <updated>Fri, 05 Feb 2021 00:00:00 +0000</updated>
+        <id>https://www.moystard.com/blog/koa-typings/</id>
+        <content type="html" xml:base="https://www.moystard.com/blog/koa-typings/">&lt;p&gt;With a bit of Typescript magic, it is possible to add strict typing to the body of Koa requests and responses.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Typescript and Koa users know how loose the Typescript typing is for the requests and responses of the Koa contexts. Indeed, Koa (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dlau&#x2F;koa-body&quot;&gt;Koa-Body&lt;&#x2F;a&gt;) default types use &lt;code&gt;any&lt;&#x2F;code&gt; for the request and response body type.&lt;&#x2F;p&gt;
+&lt;p&gt;This short blog post will show how you can add more robustness to your controllers by typing your bodies thanks to a simple generic interface.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;sparkling-koa-with-genericity&quot;&gt;Sparkling Koa with Genericity&lt;&#x2F;h1&gt;
+&lt;p&gt;We want to be able to provide the types of the request and the response body, whilst keeping the built-in flexibility. That&#x27;s easy to achieve with Typescript generics as demonstrated below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#393939;color:#dedede;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ Context, Request } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;koa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;interface &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaRequest&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;RequestBody &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;any&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d78d1b;&quot;&gt;Request &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;?: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;RequestBody&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;export &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;interface &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaContext&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;RequestBody &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;any&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;ResponseBody &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;any&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d78d1b;&quot;&gt;Context &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    request&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaRequest&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;RequestBody&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;ResponseBody&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;export &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;interface &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaResponseContext&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;ResponseBody&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d78d1b;&quot;&gt;KoaContext&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;any&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;ResponseBody&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; {}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Having typed bodies should not prevent you from runtime checking the request bodies to ensure that you were provided with a valid input. If you are composing middlewares, you probably runtime check up the chain, and having typed bodies downstream where you know the input has been validated prevents you from duplicating the checks.&lt;&#x2F;p&gt;
+&lt;p&gt;For assembling responses, having type safety at the compiler level should prove enough.&lt;&#x2F;p&gt;
+&lt;p&gt;I am actually surprised that those are not the original type definitions in &lt;code&gt;@types&#x2F;koa&lt;&#x2F;code&gt; and &lt;code&gt;@types&#x2F;koa-body&lt;&#x2F;code&gt; but I am sure they had their reasons. &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s put our new interfaces in practice with a couple of examples.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#393939;color:#dedede;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Router &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;koa-router&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;koaBody &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fed6af;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;koa-body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;interface &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldRequestDto &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;interface &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldResponseDto &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    message&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6ae;&quot;&gt;helloRouter &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;Router&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;helloRouter.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffd87;&quot;&gt;post&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffd87;&quot;&gt;koaBody&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;async &lt;&#x2F;span&gt;&lt;span&gt;(ctx&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaContext&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldRequestDto&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldResponseDto&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0cfa1;&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#87ae86;&quot;&gt; Request body is now typed.
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6ae;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ctx.res.body;
+&lt;&#x2F;span&gt;&lt;span&gt;    ctx.res.statusCode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#87d6d5;&quot;&gt;200&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0cfa1;&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#87ae86;&quot;&gt; Response body is also typed.
+&lt;&#x2F;span&gt;&lt;span&gt;    ctx.body &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        message: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;`Hello ${name}!`&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The compiler will error if we try to access properties not defined in the body types. Using the same DTO types, the code below would not compile:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#393939;color:#dedede;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span&gt;helloRouter.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffd87;&quot;&gt;post&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d680;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffd87;&quot;&gt;koaBody&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;()&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;async &lt;&#x2F;span&gt;&lt;span&gt;(ctx&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;KoaContext&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldRequestDto&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6d6;&quot;&gt;HelloWorldResponseDto&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0cfa1;&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#87ae86;&quot;&gt; The compiler will fail as lastName is not defined in `HelloWorldRequestDto`.
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fffb9d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6ae;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d6d6ae;&quot;&gt;lastName &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;ctx.res.body;
+&lt;&#x2F;span&gt;&lt;span&gt;    ctx.res.statusCode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#87d6d5;&quot;&gt;200&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0cfa1;&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#87ae86;&quot;&gt; The compiler would also fail here because we are defining a property absent from `HelloWorldResponseDto`, and `message` is absent.
+&lt;&#x2F;span&gt;&lt;span&gt;    ctx.body &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ececec;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        msg: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d68686;&quot;&gt;`Hello ${name}!`&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#78cecc80;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;KoaContext&lt;&#x2F;code&gt; interface uses default value for the generics; this allows specifying the request body type without the response&#x27;s: &lt;code&gt;KoaContext&amp;lt;RequestBodyType&amp;gt;&lt;&#x2F;code&gt; will assume that the response body type is &lt;code&gt;any&lt;&#x2F;code&gt;. The &lt;code&gt;KoaResponseContext&lt;&#x2F;code&gt; allows you to specify the response body type without the request&#x27;s for extra convenience.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;Leveraging Typescript and generics, we were able to add stricter typing to Koa. This should help you when composing middlewares, and assembling your response bodies. Happy coding!&lt;&#x2F;p&gt;
+</content>
+
+        
+
+        
+          <summary type="html">With a bit of Typescript magic, it is possible to add strict typing to the body of Koa requests and responses.
+</summary>
+        
+
+    </entry>
+</feed>
