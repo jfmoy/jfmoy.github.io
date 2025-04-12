@@ -12,7 +12,6 @@ I currently work as a VP of Engineering for [Vestiaire Collective](https://www.v
 Want to know a bit more about me? Feel free to reach out to me on any platform below.
 
 - [LinkedIn](https://www.linkedin.com/in/jeanfrancoismoy)
-- [Twitter](https://twitter.com/moystard)
 - [Lobsters](https://lobste.rs/u/moystard)
 - [Hacker News](https://news.ycombinator.com/user?id=moystard)
 
